@@ -1,0 +1,36 @@
+@use 'variables' as v;
+
+// Mixin de referencia
+
+// @mixin heading($color: aqua, $border-radius: false) {
+//   text-transform: uppercase;
+//   color: $color;
+//   font-size: 3rem;
+//   letter-spacing: 30px;
+//   background-color: black;
+
+//   @if $border-radius {
+//     border-radius: 3rem
+//   }
+// }
+
+@mixin telefono {
+  @media (min-width: v.$telefono){
+    @content;
+  }
+}
+@mixin tablet {
+  @media (min-width: v.$tablet){
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: v.$desktop){
+    @content;
+  }
+}
+@mixin desktopXL {
+  @media (min-width: v.$desktopXL){
+    @content;
+  }
+}
